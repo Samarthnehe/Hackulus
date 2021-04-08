@@ -1,0 +1,50 @@
+.navbar{
+
+    height: 70px;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.7);
+    padding-right: 20px;
+    border-radius: 0;
+    margin: 0;
+}
+
+.navbar> a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.header__logo{
+    flex: 1;
+    padding-left: 40px;
+    
+}
+.header__nav{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex: 3;
+}
+.header__nav .header__options a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: medium;
+}
+.header__nav .header__options{
+    padding: 10px;
+    margin: 0 20px;
+    
+    
+}
+.header__nav .header__options a:hover{
+    color: rgb(70, 67, 67);
+}
