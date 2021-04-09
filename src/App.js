@@ -7,6 +7,8 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Feature from './components/Feature';
 import Navbar1 from './components/Navbar1';
+import Encryption from './components/Encryption';
+import Text from './components/Text';
 
 
 function App() {
@@ -35,6 +37,14 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login/>
+        </Route>
+        <Route exact path="/encryption">
+          <Navbar1/>
+          <Encryption/>
+        </Route>
+        <Route exact path="/encrypt_text">
+          <Navbar1/>
+          <Text/>
         </Route>
 
       </Switch>
