@@ -6,8 +6,8 @@
     background-image: linear-gradient(-60deg, var(--back) 0%, #111 100%);
 }
 .login__container{
-   width: 70%;
-   height: 65vh;
+   width: 100%;
+   height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -17,6 +17,7 @@
     height: 100%;
     background-color: white;
     flex: 3;
+
 }
 .login__left .login__header{
    display:flex;
@@ -30,12 +31,18 @@
     height: 100%;
     background-color: var(--primary);
     flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .login__main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    height: calc(100vh - 40px);
+    
 }
 .login__head{
     text-align: center;
@@ -52,11 +59,12 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 10px;
+    width: 70%;
 }
 .login__form form{
-    width: 80%;
+    width: 100%;
 }
 .login__form form h5{
     color: white;
@@ -81,6 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .login__button button{
    
@@ -88,7 +97,7 @@
     background-color: var(--third);
     border-radius: 50px;
     padding: 10px;
-    width: 80%;
+    width: 70%;
     border: none;
     font-size: medium;
     font-weight: 600;

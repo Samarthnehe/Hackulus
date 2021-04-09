@@ -4,7 +4,7 @@ import login from '../images/login.svg';
 
 function Login() {
     return (
-        <div className="login">
+        
             <div className="login__container">
             
                     <div className="login__left">
@@ -13,10 +13,10 @@ function Login() {
                         </div>
                         <div className="login__main">
                             <div className="login__svg">
-                                    <img src={login}  width={"320px"} height={"320px"}/>
+                                    <img src={login}  width={"550px"} height={"550px"}/>
                             </div>
                             <div style={{textAlign:"center"}}>
-                                <h4>Your security is our priority</h4>
+                                <h2>Your security is our priority</h2>
                                 <p>There are many variations of passages of Lorem Ipsum available</p>
                             </div>
                         </div>
@@ -24,7 +24,7 @@ function Login() {
                     </div>
                     <div className="login__right">
                          <div className="login__head">
-                                <h2>Welcome Back</h2>
+                                <h1>Welcome Back</h1>
                                 <p>Sign In to your account</p>
 
                          </div>
@@ -39,7 +39,7 @@ function Login() {
                                     {/* <button type="submit" className="login__loginButton">Login</button> */}
                                 </form>
                         </div>
-                        <div style={{textAlign:"right",paddingRight:"10%",color:"white"}}>
+                        <div style={{textAlign:"right",paddingRight:"5%",color:"white",width:"80%"}}>
                             <p style={{fontSize:"small",fontWeight:"500"}}>Forgot Password?</p>
                         </div>
                         <div className="login__button">
@@ -53,7 +53,7 @@ function Login() {
                     </div>
              
             </div>
-        </div>
+      
     )
 }
 
