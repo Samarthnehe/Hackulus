@@ -3,6 +3,8 @@
     --primarydark:#6C63FF;
     --secondary: #4641FF;
     --dark:#000;
+    --back:#333C44;
+    --third:#06D19C;
 }
 .App{
     margin: 0;
