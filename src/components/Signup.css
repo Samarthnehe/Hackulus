@@ -1,11 +1,11 @@
-.login{
+.signup{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(-60deg, var(--back) 0%, #111 100%);
 }
-.login__container{
+.signup__container{
    width: 100%;
    height: 100vh;
    display: flex;
@@ -13,24 +13,7 @@
    align-items: center;
    box-shadow: 0px 15px 20px rgba(0,0,0,0.7);
 }
-.login__left{
-    height: 100%;
-    background-color: white;
-    flex: 3;
-
-}
-.login__left .login__header{
-   display:flex;
-   justify-content: flex-start;
-   align-items: center;
-   padding-left: 50px;
-   padding-top: 10px;
-   color: white;
-}
-.login__left .login__header a{
-    text-decoration: none;
-}
-.login__right{
+.signup__left{
     height: 100%;
     background-color: var(--primary);
     flex: 2;
@@ -38,8 +21,29 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
-.login__main{
+.signup__right .signup__header{
+   display:flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding-left: 20px;
+   padding-top: 40px;
+   color: var(--secondary);
+}
+.signup__right .signup__header a{
+    text-decoration: none;
+}
+.signup__right{
+    height: 100%;
+    background-color: white;
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.signup__main{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +51,7 @@
     height: calc(100vh - 50px);
     
 }
-.login__head{
+.signup__head{
     text-align: center;
     padding-top: 30px;
     padding-bottom: 10px;
@@ -56,7 +60,7 @@
     
 
 }
-.login__form{
+.signup__form{
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -66,16 +70,16 @@
     padding-bottom: 10px;
     width: 70%;
 }
-.login__form form{
+.signup__form form{
     width: 100%;
 }
-.login__form form h5{
+.signup__form form h5{
     color: white;
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 5px;
 }
-.login__form form input{
+.signup__form form input{
     width: 100%;
     height: 30px;
     padding-left: 10px;
@@ -84,17 +88,17 @@
     border-radius: 5px;
     
 }
-.login__form form input::placeholder{
+.signup__form form input::placeholder{
     color: rgb(241, 240, 240);
     font-weight: 500;
 }
-.login__button{
+.signup__button{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.login__button button{
+.signup__button button{
    
     margin-top: 30px;
     background-color: var(--third);

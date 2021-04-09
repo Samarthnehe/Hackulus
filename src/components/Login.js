@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import {Link} from 'react-router-dom';
 import login from '../images/login.svg';
 
 function Login() {
@@ -9,7 +10,7 @@ function Login() {
             
                     <div className="login__left">
                         <div className="login__header">
-                            <h2>HACKULUS</h2>
+                           <Link to="/"><h1>HACKULUS</h1></Link> 
                         </div>
                         <div className="login__main">
                             <div className="login__svg">
@@ -46,7 +47,7 @@ function Login() {
                             <button>Login</button>
                         </div>
                         <div style={{textAlign:"center",color:"white",fontWeight:"500"}}>
-                            <p>Don't have an account? <a>Sign Up</a></p>
+                            <p>Don't have an account? <a style={{textDecoration:"none",color:"white"}} href="/signup">Sign Up</a></p>
                         </div>
 
 
