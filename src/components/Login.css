@@ -1,0 +1,18 @@
+.login__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login__div{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+.login__div .login__left{
+    flex: 3;
+}
+.login__div .login__right{
+    flex: 1;
+}

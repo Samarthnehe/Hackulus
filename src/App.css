@@ -1,5 +1,12 @@
 :root{
-    --primary:#46aef7 ;
-    --secondary: black;
-    --light:#30c7ec;
+    --primary:#6C63FF ;
+    --primarydark:#6C63FF;
+    --secondary: #4641FF;
+    --dark:#000;
+}
+.App{
+    margin: 0;
+    padding: 0;
+
+  
 }
