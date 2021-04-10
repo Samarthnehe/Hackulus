@@ -15,8 +15,8 @@ function Login() {
         e.preventDefault();
         await axios.post(`https://api-hackulus.herokuapp.com/api/user/login?email=${email}&password=${password}`)
         .then((response)=>{
-            if(response.status===200){
-                history.push('/features')
+            if(response.status==200){
+                history.push('/features');
             }
         })
         .catch(()=>{
@@ -58,7 +58,7 @@ function Login() {
     
     const handleOtpSubmit=(email,otp,e)=>{
         e.preventDefault();
-        // const response =await axios.post(`https://api-hackulus.herokuapp.com/api/verify?email=${email}&otp=${otp}`);
+        const response =await axios.post(`https://api-hackulus.herokuapp.com/api/verify?email=${email}&otp=${otp}`);
         history.push('/features');
 
         

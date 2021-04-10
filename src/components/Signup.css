@@ -86,6 +86,7 @@
     background-color: #423cb1;
     border: none;
     border-radius: 5px;
+    color:white;
     
 }
 .signup__form form input::placeholder{

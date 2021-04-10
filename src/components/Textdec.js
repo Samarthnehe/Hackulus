@@ -12,11 +12,11 @@ function Textdec() {
     const handleClick=async(text,e)=>{
         e.preventDefault();
         console.log(text);
-        setDecrypt("My name is atharva");
+        
         const response =await axios.get(`https://api-hackulus.herokuapp.com/api/decrypt?text=${text}`);
           const answer=(response.data.data)
-          console.log(answer)
-          
+          console.log(answer);
+          setEncrypt(answer);
     }
         
     console.log(decrypt)
