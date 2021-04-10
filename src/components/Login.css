@@ -109,16 +109,16 @@
     margin-bottom: 20px;
 }
 /* f007 */
-.login__otp{
+#login__otp{
     display: none;
-    transform: all 0.3s ease-in-out;
-    display: flex;
+   
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.login__otp .buttons button{
+#login__otp .buttons button{
     margin-top: 30px;
     background-color: var(--back);
     border-radius: 50px;
@@ -131,18 +131,37 @@
     margin-bottom: 20px;
  
 }
-.login__otp form {
+#login__otp .buttons button:hover{
+    background-color: var(--third);
+
+}
+#otp_msg{
+    width:100%;
+    height: 30px;
+    color: red;
+    
+
+}
+#login__otp form {
     width: 70%;
     margin-top: 30px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
-.login__otp form h5{
+#login__otp form h5{
     font-weight: 500;
     color: white;
     margin-bottom: 5px;
 }
-.login__otp form input{
+#login__otp form .login__sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login__otp form .login__sub input{
  
-        width: 100%;
+        width: 60%;
         height: 30px;
         padding-left: 10px;
         background-color: #423cb1;
@@ -151,12 +170,12 @@
         
     
 }
-.login__otp form input::placeholder{
+#login__otp form .login__sub  input::placeholder{
  
     color:white;
 
 }
-.login__otp .buttons{
+#login__otp .buttons{
     display: flex;
     align-items: center;
     justify-content: space-evenly;

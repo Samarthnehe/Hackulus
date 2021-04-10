@@ -15,17 +15,19 @@ function Login() {
         e.preventDefault();
         const response =await axios.post(`https://api-hackulus.herokuapp.com/api/user/login?email=${email}&password=${password}`);
         const answer=(response)
-        console.log(answer.status);
-        console.log(answer.status==200);
+        console.log(answer);
+       
         if(answer.status==200){
-            // history.push('/features');
-            var butt = document.getElementById("login__otp");
-            butt.style.display="block";
+            history.push('/features');
+            
 
         }
         if(answer.status==401){
-            var butt = document.getElementById("Login__otp");
-            butt.style.display="block";
+            var butt = document.getElementById("login__otp");
+            butt.style.display="flex";
+            var msg=document.getElementById("otp__msg");
+            
+            msg.innerHTML="We encountered a suspicious activity. Your IP address has been tracked in a different area. Please VERIFY yourself by requesting for an OTP";
         }
        
 
@@ -41,7 +43,7 @@ function Login() {
 
     }
     const handleOtpSubmit=async()=>{
-        
+
     }
 
     return (
@@ -91,11 +93,15 @@ function Login() {
                             <p>Don't have an account? <a style={{textDecoration:"none",color:"white"}} href="/signup">Sign Up</a></p>
                         </div>
 
-                        <div className="login__otp">
+                        <div id="login__otp">
+                                <div id="otp__msg"></div>
                       
                                 <form>
-                                    <h5>OTP</h5>
+                                 
+                                    <div className="login__sub">
                                     <input  onChange={e=>setOtp(e.target.value)}  type="text" placeholder="&#xf084;       Enter OTP" style={{fontFamily:"Montserrat, FontAwesome"}}/>
+                                    </div>
+                                    
 
                                    
 
