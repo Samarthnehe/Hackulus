@@ -112,3 +112,31 @@
     margin-bottom: 20px;
 }
 /* f007 */
+.signup__form form meter {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  
+    margin: 0 auto 1em;
+    width: 100%;
+    height: 0.5em;
+  
+    /* Applicable only to Firefox */
+    background: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup__form form meter::-webkit-meter-bar {
+    background: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .signup__form form meter[value="1"]::-webkit-meter-optimum-value { background: red; }
+  .signup__form form meter[value="2"]::-webkit-meter-optimum-value { background: yellow; }
+  .signup__form form meter[value="3"]::-webkit-meter-optimum-value { background: orange; }
+  .signup__form form meter[value="4"]::-webkit-meter-optimum-value { background: green; }
+
+  #password-strength-text{
+      font-weight: 600;
+  }

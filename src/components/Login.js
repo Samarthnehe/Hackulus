@@ -26,7 +26,7 @@ function Login() {
             var butt = document.getElementById("login__otp");
             butt.style.display="flex";
             var msg=document.getElementById("otp__msg");
-            
+
             msg.innerHTML="We encountered a suspicious activity. Your IP address has been tracked in a different area. Please VERIFY yourself by requesting for an OTP";
         }
        
@@ -42,8 +42,20 @@ function Login() {
 
 
     }
-    const handleOtpSubmit=async()=>{
+    
+    const handleOtpSubmit=async(email,otp,e)=>{
+        e.preventDefault();
+        const response =await axios.post(`https://api-hackulus.herokuapp.com/api/verify?email=${email}&otp=${otp}`);
 
+        const answer=(response);
+        if(answer.status==200){
+            history.push('/');
+        }
+        if(answer.status==401){
+            var msg=document.getElementById("otp__msg");
+            msg.innerHTML="Wrong OTP! Please request again";
+        }
+        
     }
 
     return (
@@ -109,7 +121,7 @@ function Login() {
                                 </form>
                             <div className="buttons">
                                 <button id ="otp"  onClick={(e)=>handleOtp(email,e)}>Request OTP</button>
-                                <button id ="otp"  onClick={(e)=>handleOtpSubmit(otp,e)}>Submit</button>
+                                <button id ="otp"  onClick={(e)=>handleOtpSubmit(email,otp,e)}>Submit</button>
 
                             </div>
                        
