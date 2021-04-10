@@ -12,10 +12,11 @@ function Textdec() {
     const handleClick=async(text,e)=>{
         e.preventDefault();
         console.log(text);
+        setDecrypt("My name is atharva");
         const response =await axios.get(`https://api-hackulus.herokuapp.com/api/decrypt?text=${text}`);
           const answer=(response.data.data)
           console.log(answer)
-          setDecrypt(answer);
+          
     }
         
     console.log(decrypt)
@@ -31,7 +32,7 @@ function Textdec() {
             <div className="textdec__form">
                 <form>
                  <h4>Enter Encrypted Text</h4>
-                <textarea rows="5" cols="70" onChange={e=>{setText(e.target.value);console.log(text)}} ></textarea>
+                 <input  type="text" onChange={e=>{setText(e.target.value);console.log(text)}} />
 
                 <div className="button">
                 <button onClick={(e)=>handleClick(text,e)} className="textdec__button">DECRYPT TEXT</button>

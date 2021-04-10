@@ -13,22 +13,35 @@ function Login() {
 
     const handleLogin=async(email,password,e)=>{
         e.preventDefault();
-        const response =await axios.post(`https://api-hackulus.herokuapp.com/api/user/login?email=${email}&password=${password}`);
-        const answer=(response)
-        console.log(answer);
-       
-        if(answer.status==200){
-            history.push('/features');
-            
-
-        }
-        if(answer.status==401){
+        await axios.post(`https://api-hackulus.herokuapp.com/api/user/login?email=${email}&password=${password}`)
+        .then((response)=>{
+            if(response.status===200){
+                history.push('/features')
+            }
+        })
+        .catch(()=>{
             var butt = document.getElementById("login__otp");
             butt.style.display="flex";
             var msg=document.getElementById("otp__msg");
 
             msg.innerHTML="We encountered a suspicious activity. Your IP address has been tracked in a different area. Please VERIFY yourself by requesting for an OTP";
-        }
+        });
+        // const answer=(response)
+        // console.log(answer);
+       
+        // if(answer.status==200){
+        //     history.push('/features');
+            
+
+        // }
+      
+        
+            // var butt = document.getElementById("login__otp");
+            // butt.style.display="flex";
+            // var msg=document.getElementById("otp__msg");
+
+            // msg.innerHTML="We encountered a suspicious activity. Your IP address has been tracked in a different area. Please VERIFY yourself by requesting for an OTP";
+        
        
 
     }
@@ -43,18 +56,12 @@ function Login() {
 
     }
     
-    const handleOtpSubmit=async(email,otp,e)=>{
+    const handleOtpSubmit=(email,otp,e)=>{
         e.preventDefault();
-        const response =await axios.post(`https://api-hackulus.herokuapp.com/api/verify?email=${email}&otp=${otp}`);
+        // const response =await axios.post(`https://api-hackulus.herokuapp.com/api/verify?email=${email}&otp=${otp}`);
+        history.push('/features');
 
-        const answer=(response);
-        if(answer.status==200){
-            history.push('/');
-        }
-        if(answer.status==401){
-            var msg=document.getElementById("otp__msg");
-            msg.innerHTML="Wrong OTP! Please request again";
-        }
+        
         
     }
 
@@ -87,7 +94,7 @@ function Login() {
                          <div className="login__form">
                                 <form>
                                     <h5>Email</h5>
-                                    <input  onChange={e=>setEmail(e.target.value)}  type="email" placeholder="&#xf007;       Enter Email" style={{fontFamily:"Montserrat, FontAwesome"}}/>
+                                    <input  onChange={e=>{setEmail(e.target.value);console.log(email)}}  type="email" placeholder="&#xf007;       Enter Email" style={{fontFamily:"Montserrat, FontAwesome"}}/>
 
                                     <h5>Password</h5>
                                     <input  onChange={e=>setPassword(e.target.value)}   type="password"  placeholder="&#xf023;       Enter Password" style={{fontFamily:"Montserrat, FontAwesome"}}/>
@@ -111,7 +118,7 @@ function Login() {
                                 <form>
                                  
                                     <div className="login__sub">
-                                    <input  onChange={e=>setOtp(e.target.value)}  type="text" placeholder="&#xf084;       Enter OTP" style={{fontFamily:"Montserrat, FontAwesome"}}/>
+                                    <input  onChange={e=>{setOtp(e.target.value);console.log(otp)}}  type="text" placeholder="&#xf084;       Enter OTP" style={{fontFamily:"Montserrat, FontAwesome"}}/>
                                     </div>
                                     
 
