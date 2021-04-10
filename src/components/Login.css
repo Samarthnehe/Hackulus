@@ -89,7 +89,7 @@
     color: rgb(241, 240, 240);
     font-weight: 500;
 }
-.login__button{
+.login__button,.login__otp{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,3 +109,56 @@
     margin-bottom: 20px;
 }
 /* f007 */
+.login__otp{
+    display: none;
+    transform: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.login__otp .buttons button{
+    margin-top: 30px;
+    background-color: var(--back);
+    border-radius: 50px;
+    padding: 10px;
+    width: 30%;
+    border: none;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+ 
+}
+.login__otp form {
+    width: 70%;
+    margin-top: 30px;
+}
+.login__otp form h5{
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+}
+.login__otp form input{
+ 
+        width: 100%;
+        height: 30px;
+        padding-left: 10px;
+        background-color: #423cb1;
+        border: none;
+        border-radius: 5px;
+        
+    
+}
+.login__otp form input::placeholder{
+ 
+    color:white;
+
+}
+.login__otp .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}

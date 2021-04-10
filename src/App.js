@@ -9,6 +9,7 @@ import Feature from './components/Feature';
 import Navbar1 from './components/Navbar1';
 import Encryption from './components/Encryption';
 import Text from './components/Text';
+import Textdec from './components/Textdec';
 
 
 function App() {
@@ -45,6 +46,10 @@ function App() {
         <Route exact path="/encrypt_text">
           <Navbar1/>
           <Text/>
+        </Route>
+        <Route exact path="/decrypt_text">
+          <Navbar1/>
+          <Textdec/>
         </Route>
 
       </Switch>

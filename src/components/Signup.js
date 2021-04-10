@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signup.css';
 import signup from '../images/signup.svg';
-import {Link} from 'react-router-dom';
+import axios from 'axios';
+import {Link,useHistory} from 'react-router-dom';
+
 
 
 function Signup() {
+
+    const[name,setName]=useState("");
+    const[email,setEmail]=useState("");
+    const[password,setPassword]=useState('');
+    const history=useHistory();
+
+    const handleSubmit=async(name,email,password,e)=>{
+        e.preventDefault();
+        const response =await axios.post(`https://api-hackulus.herokuapp.com/api/user/create?name=${name}&email=${email}&password=${password}`);
+        const answer=(response.data.data)
+        console.log(answer);
+        history.push('/features');
+
+
+    }
+
+
     return (
         <div className="signup__container">
             
@@ -16,14 +35,14 @@ function Signup() {
              </div>
              <div className="signup__form">
                     <form>
-                        <h5>Email</h5>
-                        <input  type="text" placeholder="&#xf007;       Enter Username" style={{fontFamily:"Montserrat, FontAwesome"}}/>
+                        <h5>Username</h5>
+                        <input  onChange={e=>setName(e.target.value)}  type="text" placeholder="&#xf007;       Enter Username" style={{fontFamily:"Montserrat, FontAwesome"}}/>
 
                         <h5>Email</h5>
-                        <input  type="email" placeholder="&#xf0e0;       Enter Email" style={{fontFamily:"Montserrat, FontAwesome"}}/>
+                        <input  onChange={e=>setEmail(e.target.value)}  type="email" placeholder="&#xf0e0;       Enter Email" style={{fontFamily:"Montserrat, FontAwesome"}}/>
 
                         <h5>Password</h5>
-                        <input type="password"  placeholder="&#xf023;       Enter Password" style={{fontFamily:"Montserrat, FontAwesome"}}/>
+                        <input onChange={e=>setPassword(e.target.value)} type="password"  placeholder="&#xf023;       Enter Password" style={{fontFamily:"Montserrat, FontAwesome"}}/>
 
                         <h5>Confirm Password</h5>
                         <input type="password"  placeholder="&#xf023;       Enter Password" style={{fontFamily:"Montserrat, FontAwesome"}}/>
@@ -33,7 +52,7 @@ function Signup() {
             </div>
      
             <div className="signup__button">
-                <button>Create Account</button>
+                <button onClick={(e)=>handleSubmit(name,email,password,e)}>Create Account</button>
             </div>
             <div style={{textAlign:"center",color:"white",fontWeight:"500"}}>
                 <p>Already have an account? <a style={{textDecoration:"none",color:"white"}}  href="/login">Login</a></p>

@@ -1,4 +1,4 @@
-.text{
+.textdec{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -7,11 +7,11 @@
     flex-direction: column;
 
 }
-.text__body{
+.textdec__body{
     width: 30%;
     margin-top: 50px;
 }
-.text__form{
+.textdec__form{
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -21,19 +21,19 @@
     padding-bottom: 10px;
     width: 100%;
 }
-.text__form form{
+.textdec__form form{
     width: 100%;
 }
-.text__form form h4{
+.textdec__form form h4{
     color: black;
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 5px;
 
 }
-.text__form form input{
+.textdec__form form input{
     width: 100%;
-    height: 40px;
+    height: 70px;
     padding-left: 10px;
     background-color: var(--back);
     border: none;
@@ -42,7 +42,11 @@
     font-weight: 500;
     
 }
-.text__form form textarea{
+
+.textdec__form form input,.textdec__form form textarea{
+    border: 2px solid black;
+}
+.textdec__form form textarea{
     width: 100%;
     color: white;
     background-color: var(--back);
@@ -50,11 +54,7 @@
     padding: 10px;
 }
 
-.text__form form input,.text__form form textarea{
-    border: 2px solid black;
-}
-
-.text__form form textarea:focus{
+.textdec__form form textarea:focus{
     outline: none;
 }
 .button{
@@ -62,18 +62,18 @@
     justify-content: center;
     align-items: center;
 }
-#root > div > div.text > div > div > form div.button > button{
+#root > div > div.textdec > div > div > form div.button > button{
     margin-top: 30px;
-    background-color: var(--primary);
+    background-color: var(--third);
     border-radius: 5px;
     padding: 10px;
     width: 70%;
     border: none;
     font-size: medium;
     font-weight: 600;
-    color: white;
+    color: black;
     margin-bottom: 20px;
 }
-#root > div > div.text > div > div > form div.button > button:focus{
+#root > div > div.textdec > div > div > form div.button > button:focus{
    outline: none;
 }
